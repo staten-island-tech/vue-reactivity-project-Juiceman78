@@ -13,6 +13,9 @@ defineProps({
     required: true,
   },
 })
+function addCart() {
+  console.log('Drink has been added')
+}
 </script>
 
 <style scoped>

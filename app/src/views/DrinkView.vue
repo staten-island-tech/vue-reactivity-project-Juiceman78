@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Drinks</h1>
-    
+
     <DrinkCard v-for="drink in drinks" :key="drink.name" :drink="drink" />
   </div>
 </template>
@@ -28,10 +28,6 @@ const drinks = [
   { id: 'MB', name: 'Mulberry Boom', price: 7.49 },
   { id: 'PFB', name: 'Passion Fruit Blast', price: 6.49 },
 ]
-
-function addCart() {
-  console.log('Drink has been added')
-}
 </script>
 
 <style scoped></style>
