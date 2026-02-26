@@ -1,20 +1,24 @@
 <template>
-  <div>
+  <div :id="drink.id">
     <h2>{{ drink.name }}</h2>
     <h3>{{ drink.price }}</h3>
-    <button @click="addCart">Add to Cart</button>
+    <button @click="addCart(drink)">Add to Cart</button>
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue'
+const cart = ref(0)
 defineProps({
   drink: {
     type: Object,
     required: true,
   },
 })
-function addCart() {
-  console.log('Drink has been added')
+function addCart(drink) {
+  console.log(`${drink.name} added`)
+  cart.value = cart.value + drink.price
+  console.log(`${cart.value}`)
 }
 </script>
 

@@ -1,7 +1,6 @@
 <template>
   <div>
     <h1>Drinks</h1>
-
     <DrinkCard v-for="drink in drinks" :key="drink.name" :drink="drink" />
   </div>
 </template>
