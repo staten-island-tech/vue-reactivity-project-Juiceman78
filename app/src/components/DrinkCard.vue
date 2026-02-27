@@ -7,19 +7,12 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-const cart = ref(0)
 defineProps({
   drink: {
     type: Object,
     required: true,
   },
 })
-function addCart(drink) {
-  console.log(`${drink.name} added`)
-  cart.value = cart.value + drink.price
-  console.log(`${cart.value}`)
-}
 </script>
 
 <style scoped>
