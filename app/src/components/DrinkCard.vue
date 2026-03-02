@@ -7,13 +7,14 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+const cart = ref(0)
 defineProps({
   drink: {
     type: Object,
     required: true,
   },
 })
-let cart = 0
 function addCart(drink) {
   console.log(`${drink.name} added`)
   cart.value = cart.value + drink.price
