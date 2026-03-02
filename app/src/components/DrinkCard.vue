@@ -13,6 +13,12 @@ defineProps({
     required: true,
   },
 })
+let cart = 0
+function addCart(drink) {
+  console.log(`${drink.name} added`)
+  cart.value = cart.value + drink.price
+  console.log(`${cart.value}`)
+}
 </script>
 
 <style scoped>
