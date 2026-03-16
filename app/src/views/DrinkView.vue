@@ -1,7 +1,14 @@
 <template>
   <div>
     <h1>Drinks</h1>
-    <DrinkCard v-for="drink in drinks" :key="drink.name" :drink="drink" />
+    <h2>Total Spent: {{ total }}</h2>
+    <DrinkCard v-for="drink in drinks" :key="drink.name" :drink="drink" :addCart="addCart" />
+
+    <h2>Cart</h2>
+
+    <ul>
+      <li v-for="item in cart" :key="item.id">{{ item.name }} - ${{ item.price }}</li>
+    </ul>
   </div>
 </template>
 
@@ -27,6 +34,15 @@ const drinks = [
   { id: 'MB', name: 'Mulberry Boom', price: 7.49 },
   { id: 'PFB', name: 'Passion Fruit Blast', price: 6.49 },
 ]
+
+const cart = ref([])
+const total = ref(0)
+function addCart(drink) {
+  cart.value.push(drink)
+  total.value = total.value + drink.price
+
+  console.log(drink.name + 'added to cart')
+}
 </script>
 
 <style scoped></style>
