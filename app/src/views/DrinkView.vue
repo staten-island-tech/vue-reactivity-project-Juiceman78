@@ -52,18 +52,16 @@ function addCart(drink) {
 </script>
 
 <style scoped>
-/* Page background and font */
 .shop {
   padding: 20px;
   font-family: Arial, sans-serif;
-  background-color: #f8f8f8; /* light grey background */
+  background-color: #f8f8f8;
   min-height: 100vh;
 }
 
-/* Cart styling */
 .shop__cart {
   border: 2px solid #333;
-  background-color: #fff8dc; /* light cream */
+  background-color: #fff8dc;
   padding: 15px;
   margin-bottom: 20px;
   border-radius: 8px;
